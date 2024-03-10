@@ -7,14 +7,6 @@ import { infocontext } from './Context';
 
 const Home = ({setimg}) => {
     const [isinfo,setisinfo]=useState(false);
-
-
-
-// console.log(info)
-
-
-
-
     return (
         <SafeAreaView>
             <StatusBar
@@ -33,11 +25,8 @@ const Home = ({setimg}) => {
                     <Search  setisinfo={setisinfo} setimg={setimg}/>
 
                 </View>
-                <View>
-                    
-                        <Info  isinfo={isinfo} />
-
-                   
+                <View>                    
+                        <Info  isinfo={isinfo} />                
                 </View>
 
             </View>

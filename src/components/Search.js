@@ -15,12 +15,9 @@ const Search = ({ setisinfo,setimg }) => {
 
     const{setinfo,setref}=useContext(infocontext)
     const apiKey = "24387ba69a6f52309605463e445c75a2";
-
     const url = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
     const [city,setcity]=useState('abc')
     const addinfo =async (v) => {    
-
-
         try {
             // let data      
         const  response  = await fetch(url+v+`&appid=${apiKey}`)
@@ -61,14 +58,11 @@ const Search = ({ setisinfo,setimg }) => {
         else{
             setisinfo(false)
             setref(true)
-            setinfo("City not found")
-        }
- 
-      
+            setinfo()
+        }     
             // console.log(data)
         } catch (error) {
             setisinfo(false)
-
             console.log(error)
         }
     }

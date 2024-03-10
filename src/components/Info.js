@@ -3,16 +3,12 @@ import { View, Text, StyleSheet } from 'react-native'
 import { infocontext } from './Context'
 
 const Info = ({ isinfo }) => {
-    const { info,ref } = useContext(infocontext)
+    const { info, ref } = useContext(infocontext)
     // console.log(info)
     return (
-
-
         <>
             {isinfo ?
                 <>
-
-
                     <View style={styles.container}>
 
                         <Text style={styles.infotext}>
@@ -90,18 +86,17 @@ const Info = ({ isinfo }) => {
                         </View>
                     </View>
                 </>
-
                 :
-                 <>
-                 {ref ? <>
-                    <View style={{textAlign:'center'}}>
-                        <Text style={styles.notf}>
-                            City Not Found                      
-                              </Text>
-                    </View>
-                    </>:<></>}
+                <>
+                    {ref ? <>
+                        <View style={{ textAlign: 'center' }}>
+                            <Text style={styles.notf}>
+                                City Not Found
+                            </Text>
+                        </View>
+                    </> : <></>}
                 </>
-                }
+            }
         </>
     )
 }
@@ -127,7 +122,7 @@ const styles = StyleSheet.create({
         color: "white",
         fontWeight: "900",
         fontSize: 20,
-        textAlign:"center"
+        textAlign: "center"
         // fontWeight:"bold"
 
     },
@@ -138,11 +133,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 5
     },
-    notf:{
+    notf: {
         color: "white",
         fontWeight: "900",
         fontSize: 20,
-        textAlign:"center",
+        textAlign: "center",
         // displrsay:"none"
     }
 })

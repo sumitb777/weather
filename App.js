@@ -6,12 +6,6 @@ import { useContext, useState } from 'react';
 import Context, { infocontext } from './src/components/Context';
 export default function App() {
   const [img, setimg] = useState(imge)
-
-
-console.log(img)
-
-
-
   return (
     <Context>
      
