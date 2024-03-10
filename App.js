@@ -1,20 +1,41 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, Text, View, SafeAreaView, ImageBackground } from 'react-native';
+import Home from './src/components/Home';
+import imge from './assets/underwater.jpg'
+import { useContext, useState } from 'react';
+import Context, { infocontext } from './src/components/Context';
 export default function App() {
+  const [img, setimg] = useState(imge)
+
+
+console.log(img)
+
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Context>
+     
+      <ImageBackground source={img} style={{ width: '100%', height: '100%', flex: 1 }} resizeMode="cover" >
+
+
+        <View style={styles.container} >
+
+          <Home setimg={setimg} />
+
+        </View>
+      </ImageBackground>
+    </Context>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // backgroundColor: 'white',
+    marginTop: 17,
+    paddingTop: 13
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 });
